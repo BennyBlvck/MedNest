@@ -100,7 +100,7 @@ All images are licensed under the [Unsplash License](https://unsplash.com/licens
 
 ---
 
-DirectLink to view: 
+[Direct link to view:] (https://bennyblvck.github.io/MedNest/)
 
 Thank you for checking out **MedNest**.  
 More projects coming every week 🚀
