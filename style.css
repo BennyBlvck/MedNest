@@ -1,0 +1,615 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    font-family: sans-serif, Arial, Helvetica;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+/* Apply Montserrat only to heading tags */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Anton", sans-serif;
+}
+
+/* BrandName */
+
+.navbar-brand strong {
+    font-size: 1.75rem; /* Increase from default (1.25rem) */
+}
+
+/* Default green for 'Med' */
+.brand-med {
+    color: #00796b;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+/* Turn white on hover */
+.navbar-brand:hover .brand-med {
+    color: white;
+}
+
+/* Optional: styling 'Nest'*/
+.brand-nest {
+    color: #393934; 
+}
+
+/* Navigation */
+/* Make nav links white */
+.navbar-nav .nav-link {
+    color: #00796b;
+}
+
+.navbar-nav .nav-link:hover {
+    color: white;
+}
+
+
+/* Hero Section */
+.hero-container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-section {
+    height: 100vh;
+    background: url('./homecover.jpg') no-repeat center center/cover; /* Photo by Jimmy Dean on Unsplash */
+    padding: 0 20px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    color: #ffffff;
+    position: relative;
+    z-index: 1;
+}
+
+/* h1 styling */
+.hero-section h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0.5rem;
+    text-align: right;
+    color: #00796b;
+}
+
+/* Paragraph Styling */
+.hero-section p {
+    font-size: 3.5rem;
+    font-family: 'Anton', sans-serif;
+    font-weight: 900;
+    line-height: 1.2;
+    text-align: right;
+    max-width: 800px;
+    margin-bottom: 2rem;
+    color: #ffffff;
+    align-self: flex-end;
+    text-shadow: #555 1px 1px 2px;
+
+}
+
+/* Style for Learn More */
+.btn-learn-more {
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  color: white;
+  font-weight: bold;
+  padding: 0.75rem 2rem;
+  border-radius: 0;
+  transition: all 0.3s ease;
+  transform: scale(1); /* baseline */
+}
+
+.btn-learn-more:hover {
+  transform: scale(1.05); /* same as CTA */
+  color: #00796b;
+  background-color: white;
+  border-color: white;
+}
+
+.triple-arrow {
+  font-size: 1rem;
+  color: white;
+  margin-left: 0px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.triple-arrow:hover {
+  transform: translateX(10px);
+}
+
+@media (max-width: 575.98px) {
+  .hero-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-section p {
+    font-size: 2.5rem;
+  }
+
+  .certified-box {
+    padding: 20px;
+  }
+}
+
+/* Make an appointment section with image as full background */
+.coach-section {
+  background: url('./appointment.jpg') no-repeat center center/cover;
+  position: relative;
+  min-height: 400px; /* Or use height: 100vh for full screen height */
+  display: flex;
+  align-items: center;
+}
+
+/* Dark overlay */
+.coach-overlay {
+  background-color: rgba(0, 0, 0, 0.6); /* darken image for text contrast */
+  width: 100%;
+  height: 100%;
+}
+
+/* Text container */
+.coach-text {
+  color: white;
+  padding: 2rem;
+}
+
+/* Subheading */
+.subheading {
+  color: #00796b;
+  letter-spacing: 1px;
+  font-size: 1rem;
+}
+
+/* Paragraph font */
+.coach-paragraph {
+  font-family: "Anton", sans-serif;
+  font-size: 2rem;
+}
+
+/* CTA Button */
+.btn-cta {
+  background-color: #00796b;
+  color: white;
+  padding: 0.75rem 2rem;
+  font-weight: bold;
+  border-radius: 0;
+  transition: all 0.3s ease-in-out;
+  border: none;
+}
+
+.btn-cta:hover {
+  background-color: #00796b;
+  transform: scale(1.05);
+}
+
+.triple-arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+.btn-cta:hover .triple-arrow {
+    transform: translateX(5px);
+}
+
+/* Feature Section */
+
+.features-section {
+  position: relative;
+  margin-top: -60px; /* this lifts it up to overlap */
+  background: transparent;
+  position: relative;
+  z-index: 2;
+  padding-top: 120px; /* Adjusted padding for overlap */
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.05);
+}
+
+
+/* Default: no overlap on mobile */
+.overlap-sm {
+  margin-top: 60px;
+}
+
+/* Medium screens: top 3 overlap */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .features-section .col:nth-child(-n+3) {
+    margin-top: -200px;
+  }
+}
+
+/* Small screens: top 2 overlap */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .features-section .col:nth-child(-n+2) {
+    margin-top: -200px;
+  }
+}
+
+@media (min-width: 992px) {
+  .features-section .col {
+    margin-top: -200px;
+  }
+}
+  
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+  }
+
+  .feature-icon:hover {
+    transform: scale(1.2);
+  }
+
+  .feature-box {
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    padding: 20px;
+    height: 100%;
+    margin-bottom: 30px;
+    transition: box-shadow 0.3s ease;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .feature-box:hover {
+    
+    background-color: #00796b;
+    color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .feature-box h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  .feature-box h3:hover {
+    color: white;
+  }
+
+  .feature-box p {
+    font-size: 0.95rem;
+    color: #555;
+  }
+
+  .feature-box p:hover {
+    color: white;
+  }
+
+
+  .certified-box {
+    background-color: #e8f5e9;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 0 12px rgba(0, 128, 0, 0.1);
+    margin-top: 60px;
+    margin-bottom: 40px;
+  }
+
+  .certified-box h3 {
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+
+  .certified-box p {
+    color: #333;
+    font-size: 1rem;
+  }
+
+  @media (max-width: 767px) {
+    .feature-box {
+      margin-bottom: 20px;
+    }
+  }
+
+  /* Why Choose Us Section */
+.text-aboutus {
+    font-size: 2rem;
+    line-height: 1.6;
+    color: #00796b;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .brand-name-text{
+    font-weight: bold;
+    color: #00796b;
+  }
+
+  .about-image-frame {
+  border: 4px solid #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  overflow: hidden; /* ensures image doesn't overflow when scaled */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  background: #fff;
+}
+
+.about-image-frame:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Services */
+
+.services-carousel {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+/* Each card should have fixed max width and consistent height */
+.service-card {
+  width: 350px; /* consistent width */
+  height: 520px; /* fixed height to prevent shifting */
+  max-width: 90vw;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  background-color: #f8f8f8; /* Lighter background for contrast */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Image height control */
+.service-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.service-body {
+  height: 300px; /* fixed height for uniformity */
+  padding: 20px;
+  background-color: #f8f8f8;
+  color: #555;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+
+}
+
+.service-card h5 {
+  font-weight: 600;
+  margin-bottom: 5px;
+  font-size: 1.25rem;
+  color: #393934;
+}
+
+.service-card p {
+  font-weight: 400; 
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #555;    
+  margin-bottom: 1rem;
+}
+
+.service-card:hover .service-body {
+  background-color: #00796b;
+  color: white;
+}
+
+.service-card:hover h5,
+.service-card:hover p {
+  color: white;
+}
+
+.btn-learn {
+  padding: 0.75rem 2rem;
+  font-weight: bold;
+  border-radius: 0;
+  border: 2px solid #393934;
+  color: #393934;
+  background-color: transparent;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  text-transform: none;
+}
+
+.service-card:hover .btn-learn {
+  background-color: white;
+  color: #00796b;
+  border: 2px solid white;
+  transform: translateY(-3px);
+}
+
+.services-carousel {
+  justify-content: center;
+}
+
+@media (max-width: 576px) {
+  .service-card {
+    height: auto !important;
+  }
+
+  .service-body {
+    height: auto !important;
+  }
+}
+
+  /* Blog */
+.section-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #00796b;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+  /* Section background */
+.info-section {
+  background: url('./doctor.jpeg') center 10%/cover no-repeat;
+  position: relative;
+  color: white;
+}
+
+/* Green overlay */
+.blog-overlay {
+  background-color: rgba(0, 50, 30, 0.65);
+  width: 100%;
+  height: 100%;
+}
+
+/* Base card styles */
+.info-card {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 300px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+/* Card lift on hover */
+.info-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+/* Text overlay */
+.info-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.45);
+  z-index: 1;
+  border-radius: 12px;
+}
+
+.info-card h3,
+.info-card p {
+  position: relative;
+  z-index: 2;
+}
+
+/* Left Card Image */
+.card-left {
+  background-image: url('./blogdiary.jpg');
+}
+
+/* Right Card Image (adjusted to show head) */
+.card-right {
+  background-image: url('./doctor.jpeg');
+  background-position: center 10%; /* move slightly down */
+}
+
+/* Arrow Button */
+.arrow-btn {
+  width: 35px;
+  height: 35px;
+  background: #eee;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 1.2rem;
+  left: 1.5rem;
+  z-index: 2;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.arrow-btn i {
+  font-size: 1rem;
+  color: #00796b;
+}
+
+.arrow-btn:hover {
+  background: #00796b;
+  transform: scale(1.1);
+}
+
+.arrow-btn:hover i {
+  color: white;
+}
+
+/* Make an Appointment Section */
+
+.form-input {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 0;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.form-input::placeholder {
+  color: #ccc;
+  opacity: 0.7; /* Slightly faded placeholder */
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: white;
+  box-shadow: none;
+  background-color: transparent;
+  color: white;
+}
+
+/* Footer */
+.footer-section {
+  background-color: black;
+  color: #f1f1f1;
+}
+
+.footer-section h4, .footer-section h5 {
+  font-weight: 700;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.footer-section p {
+  font-size: 14px;
+}
+
+.social-icons a {
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover i.bi-facebook { color: #3b5998; }
+.social-icons a:hover i.bi-twitter { color: #1da1f2; }
+.social-icons a:hover i.bi-instagram { color: #e1306c; }
+.social-icons a:hover i.bi-linkedin { color: #0077b5; }
+
+.base-text {
+  color: #00796b;
+  opacity: 0.8;
+  font-size: 0.9rem;
+  text-align: center; 
+}
